@@ -1,88 +1,65 @@
-/* Resetando margens e padding */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Cor de fundo e fonte */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0073dfe8;
+    background: #e5f2ff;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
 }
 
-/* Título principal */
-h2 {
-    text-align: center;
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 40px;
+/* Título */
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0d3b66;
 }
 
-/* Container com a galeria de imagens */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.subtitulo {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-top: 8px;
 }
 
-/* Coluna com texto e imagem */
-.col {
-    position: relative;
-    width: 30%;
-    margin: 10px;
-    text-align: center;
-}
-
-/* Estilo do título dentro das colunas */
-.col h3 {
-    font-size: 16px;
-    color: #555;
-    margin: 15px 0;
-}
-
-/* Imagens com borda arredondada e efeito de hover */
-.col img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Cards */
+.card {
+    border-radius: 14px;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de zoom nas imagens ao passar o mouse */
-.col img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
-/* Estilos para colunas responsivas */
-@media (max-width: 1024px) {
-    .col {
-        width: 45%;
-    }
+.card-title {
+    color: #0d3b66;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-@media (max-width: 768px) {
-    .col {
-        width: 90%;
-    }
-}
-
-/* Estilo do texto para maior legibilidade */
-.col h3 {
-    font-size: 18px;
-    line-height: 1.5;
+.card-text {
+    font-size: 16px;
     color: #555;
 }
 
-/* Adicionando espaçamento e aumentando a legibilidade para telas menores */
-@media (max-width: 576px) {
-    h2 {
-        font-size: 24px;
+/* Imagens */
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .card-img-top {
+        height: 200px;
     }
 }
